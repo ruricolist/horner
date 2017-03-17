@@ -62,12 +62,10 @@ You can use the `evalpoly` macro, which does the transformation automatically.
     ;; Good, easy, but we can do better.
     (horner:evalpoly x c0 c1 c2 c3 c4)
 
-(This actually does more than the above, however: it uses a different
-and more efficient scheme when `x` is a complex number.)
-
-This is a big improvement. Most of the time, however, the coefficients
-of a polynomial are constants, known at compile time. In this case, we
-can do even better than the above by simply inlining the constants.
+This is a big improvement, but we can do better. Most of the time the
+coefficients of a polynomial are constants, known at compile time. In
+this case, we can do better than the above by simply inlining the
+constants.
 
 Say you want to define the [error function][]. You look
 into [Abramowitz and Stegun][A&S] and find a formula for a rational
@@ -82,7 +80,10 @@ macro:
       -1.453152027
       1.061405429)
 
-If all this did was inline the computation, that would be a significant gain. But it does better: because the coefficients are known in advance, the macro is able to *precondition* the computation, saving a multiplication.
+If all this did was inline the computation, that would be a
+significant gain. But it does better: because the coefficients are
+known in advance, the macro is able to *precondition* the computation,
+thereby saving a multiplication.
 
 [Julia]: http://julialang.org/
 [Horner’s rule]: https://en.wikipedia.org/wiki/Horner%27s_method#Description_of_the_algorithm
