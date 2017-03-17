@@ -21,7 +21,7 @@ pre-computing intermediate values. (Again, see Knuth AOCP v2.)
 
 # Examples
 
-In /The Art of Scientific Computing/, the case for Horner’s rule is put in terms of life and death:
+In *The Art of Scientific Computing*, the case for Horner’s rule is put in terms of life and death:
 
 > We assume that you know enough never to evaluate a polynomial this way:
 >
