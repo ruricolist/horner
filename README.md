@@ -65,7 +65,8 @@ You can use the `evalpoly` macro, which does the transformation automatically.
 This is a big improvement, but we can do better. Most of the time the
 coefficients of a polynomial are constants, known at compile time. In
 this case, we can do better than the above by simply inlining the
-constants.
+constants, so the whole computation can be done without any memory
+accesses.
 
 Say you want to define the [error function][]. You look
 into [Abramowitz and Stegun][A&S] and find a formula for a rational
