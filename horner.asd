@@ -1,7 +1,7 @@
 ;;;; horner.asd
 
 (asdf:defsystem #:horner
-  :description "Describe horner here"
+  :description "Inline polynomial evaluation using Horner's rule."
   :author "Paul M. Rodriguez <pmr@ruricolist.com>"
   :license "MIT"
   :depends-on (:alexandria :serapeum :infix-math)
