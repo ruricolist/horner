@@ -4,7 +4,7 @@
 
 ;;; "horner" goes here. Hacks and glory await!
 
-(defsubst eval-horner (x coeffs)
+(defun eval-horner (x coeffs)
   "Eval COEFFS at run time, for testing."
   (reduce (op (+ (* _2 x) _1))
           coeffs
